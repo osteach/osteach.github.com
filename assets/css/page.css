@@ -6,3 +6,9 @@ body {
 article {
 	width:700px;
 }
+
+#fork {
+	position: fixed;
+	top:0px;
+	right:0px;
+}
