@@ -18,7 +18,9 @@ var list = {
 			[ "开源软件_理想和现实的折衷", "class/freesoftware/Opensource" ],
 			[ "开源软件与自由软件", "class/freesoftware/OS&Free" ],
 			[ "软件分类", "class/freesoftware/Classification" ],
-			[ "开源软件许可证", "class/freesoftware/License" ]
+			[ "开源软件许可证", "class/freesoftware/License" ],
+			[ "UNIX和黑客文化", "class/freesoftware/Unix" ],
+			[ "Linux与操作系统", "class/freesoftware/Linux" ]
 
 		]
 	},
