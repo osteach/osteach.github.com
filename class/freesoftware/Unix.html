@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+<head>
+	<title>UNIX和黑客文化</title>
+	<link rel="stylesheet" href="../../assets/css/page.css">
+</head>
+	<body>
+		<header>
+			<h1>UNIX和黑客文化</h1>
+		</header>
+		<section>
+			<article>
+				
+
+				<h3>UNIX 起源</h3>
+
+				<p>世界上本没有操作系统，用的人多了，就有了操作系统</p>
+
+				<h4>IBM</h4>
+
+				<ul>
+				<li>硬件为主的时代</li>
+				<li>大型机</li>
+				<li>批处理工具</li>
+				<li>OS/360 操作系统
+				<ul><li>只能针对某型号</li>
+				<li>批处理：一般来讲是先将程序卡片装入设备，然后再等1个小时再过来取回运算的结果，其效率之低可想而知</li></ul></li>
+				</ul>
+
+				<h4>兼容分时系统（Compatible Time-Sharing System， CTSS）</h4>
+
+				<p>AT&amp;T+GE+MIT: Mutics项目，一个创建有完备功能的分时系统以使大型机支持多用户的尝试
+				- 多用途、分时及多用户的操作系统
+				- 运行在GE-645大型主机上</p>
+
+				<p>1969年2月，贝尔实验室决定退出这个项目</p>
+
+				<h4>Ken Thompson和Dennis Ritchie</h4>
+
+				<ul>
+				<li>Ken不能玩Space Travel了</li>
+				<li>利用PDP-7上的汇编语言，Ken只花了一个月就编写完了操作系统的内核，在这个一个月中，他一周一个内核，一个文件系统，一个编辑器和一个编译程序的完成。</li>
+				<li>肯·汤普森（Ken Thompson）找上门，说借鉴Multics的设计思路，做了一个个人项目Unix，问他有没有兴趣一起参与</li>
+				<li>一台PDP-7小型计算机上玩太空冒险的游戏</li>
+				<li>Unix在1969年诞生于Bell实验室</li>
+				<li>吸取了Multics设计复杂而导致失败的教训，丹尼斯·里奇将Unix的设计原则定为”保持简单和直接”（Keep it simple stupid），也就是后来著名的KISS原则</li>
+				<li><p>他们的同事Brian Kernighan非常不喜欢这个系统，嘲笑Ken Thompson说：“你写的系统好真差劲，干脆叫Unics算了。”</p></li>
+				<li><p>1971年，Ken Thompson写了充分长篇的申请报告，申请到了一台PDP-11/24的机器
+				这台电脑只有24KB的物理内存和500K磁盘空间。Unix占用了12KB的内存，剩下的一半内存可以支持两用户进行Space Travel的游戏。</p></li>
+				<li><p>Unix最早是用不通用的机器语言编写的，如果换一个型号的计算机，就必须重新编写一遍。为了提高通用性和开发效率，丹尼斯·里奇决定发明一种新的计算机语言—-C语言。</p></li>
+				<li><p>1973，Thompson和Ritchie用C语言重写了Unix</p></li>
+				<li>1974年，Thompson和Ritchie在Communications of the ACM发表了一篇文章，这篇文章使得Unix进入了公众的领域</li>
+				<li>各个研究实验室、大学纷纷要求在他们自己的机器上尝试Unix</li>
+				<li>Bell实验室在 1958年的一件反托拉斯法案上被禁止从事于计算机商业行为。这使得Thompson可以自由的将Unix分发给询要者</li>
+				<li>第一个Unix商业公司（SCO）在1978年开始运作</li>
+				<li>从1974年开始，加州大学的Berkeley分校一直是Unix研究的亮点。Thompson在1975-76年任教于Berkeley分校</li>
+				</ul>
+
+				<h4>协作</h4>
+
+				<ul>
+				<li>Ritchie后来说到：“我们要保留的不仅是一个好的编程的环境，更重要的是一个系统，一个可以围绕之交流思想，萌发友情，产生团体的系统。编程不是仅仅将程序敲入系统，更重要的是促进紧密的交流。”</li>
+				<li>这一“协作”（fellowship）的主旨一直贯穿于Unix今后的发展历史。</li>
+				<li>早期的协作发展以及私有概念的尚未出现使得没有人去关心创新的专有权——这一模式的价值直到25年后才被重新认识</li>
+				<li>1983年，美国计算机协会将当年的图灵奖破例颁给了作为软件工程师的肯·汤普逊与里奇，获奖原因是他们“研究发展了通用的操作系统理论，尤其是实现了Unix操作系统”。并且，美国计算机协会当年还决定新设立一个奖项软件系统奖，以奖励那些优秀的软件开发者，首个软件系统奖当然也是非他们两人莫属。</li>
+				<li>1999年，里奇和汤普逊为发展C语言和Unix操作系统一起获得了美国国家技术奖章。</li>
+				</ul>
+
+				<h4>Ken Thompson</h4>
+
+				<ul>
+				<li>C语言前身B语言的作者，Unix的发明人之一(另一个是Dennis M.Riche老大，被尊为DMR)，Belle(一个厉害的国际象棋程序)的作者之一，操作系统Plan 9的主要作者(另一个是大牛人RobPike,前不久被google挖走了)，UTF-8和正则表达式的发明者</li>
+				<li>加州大学伯克利分校主修电气工程</li>
+				<li>另一个爱好：飞机，现在变成正式的职业，成为了一名专职的飞行员</li>
+				<li>Thompson加盟Google之后，与一帮高手一起捣鼓出了又一惊天之作：并发时代的系统编程语言Go。Go一经面世就闯入了编程语言排行榜前20，创造了奇迹</li>
+				<li><p>他在Google居然没有提交代码的权力！</p>
+
+				<p>按公司规定，所有程序员必须通过编程语言考试，而他还没有参加过这种考试</p>
+
+				<ul><li>Peter Seibel: 我知道Google有一个规定，每个新员工都要在接受编程语言测试之后，才允许提交代码。那就是说你也得考（你自己发明的）C罗？</li>
+				<li>Thompson: 是啊，我还没考呢。</li>
+				<li>Seibel: 你还没考？ 难道你还不能提交代码吗？</li>
+				<li>Thompson: 是啊，我不能提交代码，不行……我只是还没有去考试，还没觉得有必要去考。</li></ul></li>
+				<li><p>file.go 的提交</p>
+
+				<p>Ken Thompson was once asked what he would do differently if he were redesigning the UNIX system. His reply: “I’d spell creat with an e.” （Ken Thompson有一次在被问到——如果他可以重新设计Unix系统，他会做些什么不同的事？而他回答到：“我会把“creat”多拼一个e”）</p></li>
+				</ul>
+
+				<h4>DMR</h4>
+
+				<ul>
+				<li>哈佛大学学习应用数学，直到拿到博士学位</li>
+				<li>他在贝尔实验室的第一个任务，是参与大项目Multics</li>
+				<li>”保持简单”的原则
+				<ol><li>Unix</li>
+				<li>C 语言</li>
+				<li>《C编程语言》</li>
+				<li>个人生活
+				<ul><li>他也始终没有跳槽，一直在贝尔实验室工作，尽管后者多次分拆，到了最后已经名存实亡</li>
+				<li>2001年，接手贝尔实验室的朗讯公司，决定关闭大多数实验室，许多研究人员纷纷离开，包括Unix发明者之一的肯·汤普森都去了Google</li>
+				<li>2006年12月1日，贝尔实验室被整体卖给了法国阿尔卡特公司，第二年他就选择退休了</li>
+				<li>退休以后，他过上了隐居生活，外界几乎忘了他的存在</li>
+				<li>2011年10月12日，共事20年的同事Rob Pike从加州到新泽西去拜访他，才发现他已经去世了</li>
+				<li>Rob Pike在Google Plus发了一条简短的消息，”据我所知，Unix和C语言发明人丹尼斯·里奇已经去世”，外界才知道这件事，引发了纪念浪潮
+				<ul><li>许多网友的发帖中没有片言只字，仅仅留下一个分号“；”</li></ul></li></ul></li></ol></li>
+				</ul>
+
+				<p>给 Ken Thompson 和 Dennis Ritchie，你们激励了我。
+				—— Eric Raymond 《Unix编程艺术》卷首语。</p>
+
+				<h3>Unix分裂</h3>
+
+				<h4>AT&amp;T妄图私有化的Unix</h4>
+
+				<p>1986年IEEE指定了一个委员会制定了一个一个开放作业系统的标准，称为 POSIX （Portable Operating Systems Interface）。</p>
+
+				<p>AT&amp;T的Unix取得了这个标准制订战争的胜利，还取得了Unix这个注册商标。</p>
+
+				<p>AT&amp;T成立USG，将 Unix变成商业化的产品。</p>
+
+				<h4>BSD</h4>
+
+				<p>1978年，柏克利大学，推出了一份以第六版为基础，加上一些改进和新功能而成的 Unix。这就是著名的“1 BSD（1st
+				Berkeley Software Distribution）”</p>
+
+				<p>从此，BSD的 Unix 便和AT&amp;T 的Unix 分庭抗礼，Unix就分为System IV和4.x BSD这两大主流，各自蓬勃发展。</p>
+
+				<p>BSD对UNIX最重要的贡献之一是TCP/IP。</p>
+
+				<p>BSD的一名主要开发者，Bill Joy，在BSD基础上开发了SunOS(小型机或工作站)，并最终创办了Sun Microsystems</p>
+
+				<p>1991年，一群BSD开发者（Donn Seeley、Mike Karels、Bill Jolitz 和 Trent Hein）离开了加州大学，创办了Berkeley
+				Software Design， Inc （BSDI）。BSDI是第一家在便宜常见的Intel平台上提供全功能商业BSD UNIX的厂商。后来Bill
+				Jolitz 离开了BSDI，开始了386BSD的工作。386BSD被认为是FreeBSD、OpenBSD 和 NetBSD、DragonFlyBSD的先辈。</p>
+
+				<h4>法律纠纷</h4>
+
+				<p>BSDI很快就与AT&amp;T的UNIX Systems Laboratories（USL）附属公司产生了法律纠纷，USL是AT&amp;T注册的公司。AT&amp;T为了拥有
+				System V版权，以及Unix商标，为了垄断Unix，1992年，USL正式对BSDI提起诉讼，说BSD剽窃他的源码。</p>
+
+				<p>这场官司一直打到 AT&amp;T将自己的Unix系统实验室卖掉，新接手的Novell公司采取了一种比较开明的做法，允许BSDI自由发布自
+				己的BSD，但是前提是必须将来自于AT&amp;T的代码完全删除，于是最终了结了好评如潮的BSD系统，诞生了4。4 BSD Lite版，由于这个版本不存在法律问题，4。
+				4BSD Lite成为了现代BSD系统的基础版本。</p>
+
+				<p>这桩诉讼最终在1994年1月了结，更多地满足了BSDI的利益。伯克利套件的18，000个文件中，只有3个文件要求删除，另有70个
+				文件要求修改，并显示USL的版权说明。这项调解另外要求，USL不得对4。4BSD提起诉讼，不管是用户还是BSDI代码的分发者。
+				于是，BSD Unix走上了复兴的道路。BSD的开发也走向了几个不同的方向，并最终导致了FreeBSD、OpenBSD和NetBSD的出现。</p>
+
+				<p>这桩法律诉讼将BSD后裔的开发，特别是自由软件，延迟了两年，这导致没有法律问题的Linux内核获
+				得了极大的支持。Linux跟386BSD的开发几乎同时起步，Linus说，当时如果有自由的基于386的Unix-like操作系统，他就可能
+				不会创造Linux。</p>
+
+				<h4>Unix会死吗？</h4>
+
+				<p>1993初，一个悲观的观察家撰文指出，已经有理由认为Unix的传奇故事连同他带有黑客文明将一同破产。许多人预测，从那时
+				起Unix将在六月内死亡。他们很清楚，十年的Unix商业化，使自由跨平台的Unix梦以失败告终。Unix允诺的跨平台可移植性，
+				在一打大公司专有的Unix版本之间不停地斗嘴中丢失，一个完美的操作系统最终沦为多种版本的一团乱麻，这应该说是人类文
+				明史上的一个重大悲剧。</p>
+
+				<p>　　在专有软件社会中，只有像微软一样的“集权制，大教堂”生产方式才能成功。那个时代的人悲观地相信，技术世界的个人
+				英雄主义时代已经结束，软件工业和发展中的互联网络将逐渐地由像微软一样的巨型企业支配，再也没有“佐罗”，世界是恺撒
+				大帝的世界，计算机文明将进入黑暗的帝国时代。黑客已经死了，自由不付存在。</p>
+				<h4>UNIX传奇</h4>
+
+				<p><a href="http://coolshell.cn/articles/2322.html">http://coolshell.cn/articles/2322.html</a>
+				http://coolshell.cn/articles/2324.html</p>
+
+				<h4>UNIX年鉴</h4>
+
+				<p><a href="http://coolshell.cn/articles/1032.html">http://coolshell.cn/articles/1032.html</a></p>
+
+				<h4>TCP/IP的出现</h4>
+
+				<ul>
+				<li>在1969年，Unix诞生的同一年，美国国防部的ARPANET计划（当今Internet的直接祖先）于同一年起步。</li>
+				<li>早期的ARPANET用户团体（主要是大学生）开始于70年代中期形成，在他们大多人的眼中，Unix不过是在“缓慢发展的硬件上跛行的权宜之计”。</li>
+				<li>1980年，美国国防部需要一个小组开发TCP/IP协议，Berkeley接受了这一任务，并于1983年发布了TCP/IP 4.2版</li>
+				<li>Internet文化与 Unix文化开始在边缘上融合起来，这一融合最终拯救了这两种文化
+				<h4>黑客文化</h4></li>
+				</ul>
+
+				<p>只有痴迷的“黑客”和具有创造力的怪人结成的反叛联盟才能把我们从愚蠢中拯救出来——他们接着教导我们，真正的专业和奉献
+				精神，正是我们在屈服于世俗观念的“合理商业做法”之前的所作所为。 ——《The Art of Unix Programming》</p>
+
+				<ul>
+				<li>1961年，MIT买了第一台PDP-1小型计算机，吸引了一批来自Tech Model Railroad Club的学生做实验，最有名的成就之一是一个叫做SPACEWAR的游戏</li>
+				<li>这些学生后来成为了MIT人工智能实验室的核心成员，在上世纪六七十年代引领了当时世界上最顶尖的计算机科学潮流</li>
+				<li>1969年以后，MIT的人工智能实验室通过ARPANET与斯坦福、CMU等大学的人工智能实验室连接起来。几年之后，他们被称为“极客”（geek)。他们拥有一种共同的观念--计算机是人与人之间沟通的工具</li>
+				<li>但他们并不是Unix程序员，虽然两者均来自于学术界里的同一类型的人。
+				<ul><li>早期的Unix程序员之间并没有通过这种网络的方式进行互联；</li>
+				<li>对于Unix程序员而言，共同开发只是一种策略，而对于ARPANET黑客来说，这远不只是一种策略，而是一种共同的信仰，发展成为一种关于思想的社区的理想。</li></ul></li>
+				<li>ARPANET黑客们开始使用C语言来编程，而Unix程序员也开始学TCP/IP并互称为黑客</li>
+				<li>1983年，DEC公司的Jupiter计划终止了PDP-10及其后续产品的开发，这加速了融合的进程
+				<ul><li>由于廉价的PDP-10不再存在，MIT人工智能实验室只好购买别的机器并使用私有的操作系统</li>
+				<li>这彻底瓦解了实验室的开源文化，实验室里的许多最优秀的程序员被私有软件公司聘请</li></ul></li>
+				<li>Richard Stallman认为将软件私有化是一种违反社会道德的卑劣行为</li>
+				<li>决定开展一个计划，开发出一个完整地自由操作系统以及上面的所有软件，从而为世界上所有人摆脱私有软件的控制</li>
+				<li>为了走他的自由软件之路，他必须放弃他现在在实验室的工作，这样才能防止他的工作成果被实验室用于私有化</li>
+				<li>放弃了他的工作，发起了至今为止世界上其中一个最伟大的软件工程项目--GNU工程。GNU是以一种递归的方式定义的：GNU's Not Unix
+				<ul><li>尽管Stallman既不是、也从来没有成为一个Unix程序员，但在后1980的大环境下，实现一个仿Unix操作系统成了他追求的明确战略目标</li>
+				<li>尽管 GNU 计划大部分时候是由个人自愿无偿贡献，但 FSF 有时还是会聘请程序员帮助编写</li>
+				<li>当 GNU 计划开始逐渐获得成功时，一些商业公司开始介入开发和技术支持。当中最著名的就是之后被 Red Hat 兼并的 Cygnus Solutions</li></ul></li>
+				<li>1985年，Richard Stallman发表了GNU宣言
+				<ul><li>在该宣言中，他有意识地在80年代前的黑客价值观的基础上提出了一种意识形态，以一个新颖的、道德的、富有政治色彩的主张，一个自完备而极具个性的演说以及一份激进的改革计划作为结尾。</li>
+				<li>Richard Stallman想将80年代后分散的黑客社区团结为一个强大的社会机器以达成单纯的革命目标。</li>
+				<li>他的行动于马克思号召全世界劳动人民团结起来有相似之处。</li>
+				<li>引起了一场至今仍在进行的关于黑客文化的争议</li>
+				<li>黑客文化变得更加自觉（self-conscious）</li>
+				<li>影响已经超过了建立一个代码库的程度，而是意味着要废除软件的知识产权。</li></ul></li>
+				<li>Richard Stallman提出并大力推广“自由软件”一词，攥写了General Public Liscense(GPL)</li>
+				<li>RMS让世界上所有的人都知道，入侵电脑系统只是低级不入流的黑客干的事，真正的黑客，是为了自由，为了软件的自由，为
+				了挑战计算机世界中的霸权主义而斗争。他们不是街头小混混，他们更像是绿林好汉，更像是罗宾汉，更像是佐罗。就像渴
+				望民主的人民同专制的政府斗争一样。RMS领导着许多的黑客通过互联网向专有软件发出宣战。</li>
+				<li>另一方面，RMS的理论体系有许多东西非常有争议，他的GPL被认为是一种“病毒式”的协议，把软件产品从强制收费推向了强制免费、共享和开源</li>
+				<li>在RMS组织黑客闹革命的年代里，没有多少黑客认同于RMS的理论体系，更多的他们参与GNU只是为了体现那种在互联网上协同
+				工作，令人激动的工作模式。自从GNU设立以来，争议不断，而黑客文化却从未有统一在他的理想体系之下。</li>
+				<li>自从Linux出现以后，一个新的黑客领袖出现了，Linus Torvalds没有带给黑客们什么重要的思想体系或统一的价值观，但他整合了全世界黑客的阵营，以中庸态度网聚了世界上顶尖的黑客
+				<ul><li>绕过了GPL和反GPL的派系之争</li>
+				<li>使用GNU的工具从而以GPL的“传染性”保护了Linux</li>
+				<li>同时也不承认RMS的理论思想体系：即开源，又支持商业化</li>
+				<li>以“用自由软件是因为它运行得更好”轻而易举地盖过了“用自由软件是因为所有软件都该是自由的”</li></ul></li>
+				</ul>
+
+				<h4>黑客(hacker)</h4>
+
+				<p>　　技术上的行家或热衷于解决问题, 克服限制的人。在精神上, hacker 并不单指(限制于)这种软件 hacker 的文化。有人也把hacker的特质发挥在其它领域, 例如: 电子或者音乐方面。事实上你会发现, 在任何一种科学或艺术的最高境界, 你都可以发现 hacker 的特质。软件 hacker 们认为,那些类似的精神也都可以称为黑客。</p>
+
+				<h4>黑客不是骇客(cracker)</h4>
+
+				<p>　　hacker 和 cracker 之间最主要的不同是: hacker 们创造新东西,cracker 们破坏东西。</p>
+
+				<h4>黑客的态度</h4>
+
+				<p>　　Hacker 们解决了问题并创造新东西, 他们相信自由并自愿的互相帮助。</p>
+
+				<h4>黑客精神</h4>
+
+				<ol>
+				<li><p>这世上充满著等著被解决的迷人问题。</p></li>
+				<li><p>没有任何人必须一再的解决同一个问题。</p></li>
+				<li><p>无聊而单调的工作是有害的。</p></li>
+				<li><p>自由才好。</p>
+
+				<p>在上月底举行的混沌计算机大会（28C3）上，黑客提议发射通讯卫星对抗互联网审
+				查。 Hackerspace Global
+				Grid计划除了轨道上的卫星外，还包括了一系列地面站组成的网格。他们的长期计
+				划甚至包括帮助业余航天员送
+				上月球。业余爱好者已能将微型卫星送入规格，但停留在轨道上的时间很短；此外，
+				对预算有限的爱好者而言，
+				跟踪卫星也是一个棘手的难题。组织者表示，第一目标是太空中的不受审查的互联
+				网。*</p></li>
+				</ol>
+
+				<p>2011年10月4日，一位中国Tor用户在Tor bug tracker上报告说，未公开网桥在连上
+				数分钟之后就被切断。此前
+				防火墙屏蔽Tor主要是通过IP地址黑名单和HTTP头过滤。Team Cymru的研究人员研究
+				后发现，中国防火墙的深度
+				包检测设备已能识别Tor指纹，它会尝试用探针与秘密网桥进行连接，成功连上会就
+				将其加入黑名单。现在，瑞
+				典Karlstad大学的两位研究人员通过模拟测试，揭示了最新的防火墙诡计，并提供
+				了应对之策。报告(PDF)发表
+				在预印本网站上。研究人员在新加坡亚马逊EC2云服务器和瑞典Karlstad校园网中建
+				立了秘密网桥，Tor客户端则
+				使用中国的SOCKS代理服务器和一个VPS。他们发现，防火墙在搜索到Tor流量后，会
+				使用来自中国电信和中国联
+				通IP池中的随机IP地址扫描主机，连上就加以屏蔽。防火墙最常用的IP地址是
+				202.108.181.70，Whois记录显示
+				该地址属于Beijing Guanda Technology Co.Ltd，但研究人员推测这家公司对扫描
+				活动并不知情，它的地址被防
+				火墙冒用了。防火墙的扫描活动持续3分钟，间隔15分钟，类似[0; 3]，[15; 18]，
+				[30; 33]和[45; 48]。在测
+				试中，他们发现了令人迷惑的扫描长时间中止现象，如1月25日到1月28日（中国春
+				节），3月8日17:30到3月9日
+				10:00，3月14日10:30到3月16日4:30。长时间的中断可能是因为假期，而短时间的
+				中断可能属于系统的计划维护
+				窗口。对于如何应对中国的Tor流量识别，研究人员认为obfsproxy能打败防火墙，
+				不过目前公开的obfsproxy网
+				桥已经被中国加入到黑名单，秘密obfsproxy网桥未受影响。此外，包分割工具也可
+				以隐藏Tor流量。*
+				5. 态度并非不等效于能力。</p>
+
+				<p>　　解释：猜疑态度和尊敬各种能力。Hacker 们不会想浪费时间在虚华的人的身上, 他们尊敬的是能力 -- 特别是身为 hacker 的能力, 但对于其它方面的能力也是充满敬意。</p>
+
+				<p>《金融时报》上的一篇文章讨论了西方高科技企业应对中国黑客行动的方法。中国
+				专利申请数量已经位居世界第
+				一，但质量堪忧，没有什么让人留下印象的创新。中国一方面鼓励创新，另一方面
+				却随心所欲的盗版或窃取知识
+				产权。西方高科技不愿意将有价值的知识产权带到中国。他们同时采取了各种方法
+				保护自己的知识产权，如私人
+				太空公司SpaceX不为公司最重要的技术寻求专利保护，因为申请专利等于将“秘笈”
+				拱手送给中国的竞争对手。*</p>
+
+				<h4>列传：早期的六名黑客</h4>
+
+				<p><a href="http://www.chinaitpower.com/2005September/2005-09-13/207598.html">http://www.chinaitpower.com/2005September/2005-09-13/207598.html</a></p>
+
+				<h4>全球著名的《Discovery》电视频道评出全球最著名的16位黑客</h4>
+
+				<p><a href="http://www.techcn.com.cn/index.php?doc-view-71037.html">http://www.techcn.com.cn/index.php?doc-view-71037.html</a></p>
+
+				<ol>
+				<li>Richard Stallman</li>
+				<li>Dennis Ritchie and Ken Thompson</li>
+				<li>John Draper</li>
+				<li>Mark Abene</li>
+				<li>Robert Morris</li>
+				<li>Kevin Mitnick</li>
+				<li>Kevin Poulsen</li>
+				<li>Johan Helsingius</li>
+				<li>Vladimir Levin</li>
+				<li>Steve Wozniak</li>
+				<li>Tsutomu Shimomura</li>
+				<li>Linus Torvalds</li>
+				<li>Eric Steven Raymond</li>
+				<li>Ian Murphy</li>
+				<li><p>John Perry Barlow</p>
+
+				<p>　　每一位黑客的圈内头衔(Handle)、主要成就(Claim to fame)、第一次接触计算机(First encountered a computer)、自己独特的工具(Unusual tools)、鲜为人知的事实(Little-known fact)、目前状况(Current status)等具体情况</p></li>
+				</ol>
+
+				<h4>黑客:计算机革命的英雄</h4>
+
+				<p>Shawn the R0ck 写道 "《黑客:计算机革命的英雄》的二十五周年纪念版中文版上
+				市，这本书几乎是每一位黑客
+				必读的爱书，Steven Levy这部经典力作的25周年版从20世纪50年代早期跨越到80年
+				代后期，追述了计算机革命
+				中初期黑客的丰功伟绩，他们都是最聪明和最富有个性的精英。他们勇于承担风险，
+				勇于挑战规则，并把世界推
+				向了一个全新的发展方向。本书更新了一些著名黑客的最新资料，包括Bill Gates、
+				Mark Zuckerberg、Richard
+				Stallman和Steve Wozniak，并讲述了从早期计算机研究实验室到最初的家用计算机
+				期间一些妙趣横生的故事。
+				里也谈到到了上个月离开地球的Lisp的作者和AI的早期贡献者John McCarthy是如何
+				的教导第一代年轻的黑客的
+				，如果说"摆地摊"的Steve Jobs(黑客们更欣赏那个在车库里hacking的Jobs)改变了
+				世界，那Dennis Ritchie则
+				创造了世界,而John McCarthy则是沿着他的老师Alonzo Church的道路给予了后来的
+				黑客们创造世界的可能性。
+				奇点邻近的中文版也已经上市,此书其中一个有趣之处在于让读者思考如何把未来技
+				术进化的历程和自己的人生
+				意义联系在一起，介绍可以看这里。"*</p>
+
+				<h4>计算机使用权应该是无限制的，即所谓的实际操作规则</h4>
+
+				<h4>信息应该是自由的</h4>
+
+				<h4>怀疑权威并鼓励分权化</h4>
+
+				<h4>对人们的评价只看他们所创造的价值，而不是身份或资质</h4>
+
+				<h4>人们可以在计算机上创造艺术和美</h4>
+
+				<h4>计算机可以更好的改善人类生活</h4>
+
+				<h4>电子杂志DNFWAH</h4>
+
+				<p>Shawn the R0ck 写道 "电子杂志DNFWAH是一群来自不同领域的黑客们的简单分享，
+				2011年最后一天发布了第二
+				期（下载地址），这期的内容有一半内容都和generic hacking的内容，即非计算机
+				领域的黑客们的分享，涵盖
+				了哲学，建筑社区等话题，距离上一期的发布已经有7个月的时间，这一期的文章比
+				较稀少，只是每篇文章的内
+				容比起上一期有所增加，DNFWAH Issue 2的内容如下：*</p>
+
+				<h4>黑客与画家——硅谷创业之父Paul Graham文集，作者: [美] Paul Graham，译者: 阮一峰，出版社: 人民邮电出版社，出版年: 2011-4，页数: 264，定价: 49.00元，ISBN: 9787115249494</h4>
+
+				<h3>Unix内战</h3>
+
+				<h4>微软的崛起</h4>
+
+				<ul>
+				<li>1981年，IBM的推出个人PC</li>
+				<li>1982 Sun Microsystems公司的成立。创始人Bill Joy， Andreas Bechtolsheim，和 Vinod Khosla 开始构建带了联网功能的Unix 机器，创造了相当成功的服务器市场</li>
+				<li>Berkeley对其受取的软件费为每个40000美金，Bell实验室对此睁一只眼闭一只眼，Sun公司开始将这个版本Unix私有化</li>
+				<li>Sun公司没有预见到家庭电脑市场将不可避免的崛起并取代它的工作站市场</li>
+				<li>1985年，英特尔发行第一块386芯片，能够用一个平铺的地址空间对多达4G的内存寻址，意味着主流的英特尔微处理器有能力运行Unix</li>
+				<li>1985年也是Richard Stallman发表GNU宣言并建立自由软件基金会的一年。几乎没有人看得上他和他的GNU计划，但以后的事实将证明这是一个错误。同年，X系统得创始人发布了X系统得源代码，并不收任何版税，没有任何限制，无须注册码。</li>
+				<li>微软正从处于内战中的Unix派别从未注意过的家庭和小商业市场上数以百万计地聚集财富。1990年微软发布了Windows 3.0--第一个成功的图形界面操作系统--牢固的确立了微软的统治地位
+				<em>*</em> AT&amp;T的产权回收</li>
+				<li>1983年，AT&amp;T在第二次反托拉斯法案中失败，并将Bell实验室分解出来。这一次分解使得AT&amp;T从1958年的法案中解脱出来，并迫不及待的进行了Unix的商业化——这一举动差点杀死了Unix</li>
+				<li>多数的Unix支持者认为这次分解是一个天大的好消息。他们认为分解后的AT&amp;T、Sun微系统公司、以及Sun的小型模仿者们将会形成一个健壮的Unix工业，使用廉价的68000工作站，将会挑战并最终破开笼罩在计算机工业上的IBM垄断阴影</li>
+				<li>他们没有预料到的是，Unix的产业化将会破坏对Unix的生命力起至关重要作用的代码自由交换。
+				<h4>第一阶段--一场System V Unix与BSD Unix之间的内部纷争</h4></li>
+				</ul>
+
+				<h4>1985年以后发展为最先由IEEE提出的POSIX标准</h4>
+
+				<h4>AT&amp;T和Sun的联合以及POSIX标准的制定愈合了System V和BSD之间的裂口</h4>
+
+				<p><em>*</em> 第二阶段--开放软件基金会 vs. AT&amp;T/Sun轴心</p>
+
+				<p>随着IBM、DEC、HP等公司形成开放软件基金会（the Open Software Fundation）并且联合对抗AT&amp;T/Sun轴心而开始</p>
+
+				<h3>Unix的历史教训</h3>
+
+				<p>出自《The Art of Unix Programming》（Unix编程艺术）
+				- 距开源越近就越繁荣
+				- 过度依赖任何一种技术或者商业模式都是错误的——相反，保持软件及其设计传统的的灵活性才是长存之道
+				- 别和低价而灵活的方案较劲。或者，换句话说，低档的硬件只要数量足够，就能爬上性能曲线而最终获胜</p>
+
+				<h4>Unix族谱</h4>
+
+				<p><a href="http://www.levenez.com/unix/">http://www.levenez.com/unix/</a></p>
+
+				<h4>Unix 哲学</h4>
+
+				<p>Unix的经历对计算机领域贡献的不单单是技术，他给我们提供了丰富而生动的教材。特别是Unix引发的哲学，让今天的我们依
+				然受益不浅。</p>
+
+				<p>mupdf org/lectures/open_source_tools_NYU/lect1.pdf</p>
+
+				<h4>原则</h4>
+
+				<p>Unix遵循的原则是KISS（Keep it simple， stupid）
+				<em>*</em> Doug McIlroy 认为UNIX的哲学
+				1. Write programs that do one thing and do it well
+				2. Write programs to work together
+				3. Write programs to handle text streams, because that is a universal interface</p>
+
+				<h4>《The Art of Unix Programming》</h4>
+
+				<ul>
+				<li>Rule of Modularity :: Write simple parts connected by clean interfaces</li>
+				<li>Rule of Clarity :: Clarity is better than cleverness</li>
+				<li>Rule of Composition :: Design programs to be connected to other programs</li>
+				<li>Rule of Separation :: Separate policy from mechanism； separate interfaces from engines</li>
+				<li>Rule of Simplicity :: Design for simplicity； add complexity only where you must</li>
+				<li>Rule of Parsimony :: Write a big program only when it is clear by demonstration that nothing else will do</li>
+				<li>Rule of Transparency :: Design for visibility to make inspection and debugging easier</li>
+				<li>Rule of Robustness :: Robustness is the child of transparency and simplicity</li>
+				<li>Rule of Representation :: Fold knowledge into data so program logic can be stupid and robust</li>
+				<li>Rule of Least Surprise :: In interface design， always do the least surprising thing</li>
+				<li>Rule of Silence :: When a program has nothing surprising to say， it should say nothing</li>
+				<li>Rule of Repair :: When you must fail， fail noisily and as soon as possible</li>
+				<li>Rule of Economy :: Programmer time is expensive； conserve it in preference to machine time</li>
+				<li>Rule of Generation :: Avoid hand-hacking； write programs to write programs when you can</li>
+				<li>Rule of Optimization :: Prototype before polishing。 Get it working before you optimize it</li>
+				<li>Rule of Diversity :: Distrust all claims for “one true way”</li>
+				<li>Rule of Extensibility :: Design for the future， because it will be here sooner than you think</li>
+				</ul>
+
+				<p><em>*</em> X Windows 的设计者 Mike Gancarz
+				1. Small is beautiful。
+				2. Make each program do one thing well。
+				3. Build a prototype as soon as possible。
+				4. Choose portability over efficiency。
+				5. Store data in flat text files。
+				6. Use software leverage to your advantage。
+				7. Use shell scripts to increase leverage and portability。
+				8. Avoid captive user interfaces。
+				9. Make every program a filter。</p>
+
+				<h4>特点</h4>
+
+				<ol>
+				<li>Everything （including hardware） is a file
+				所有的事物（甚至硬件本身）都是一个的文件。</li>
+				<li><p>Configuration data stored in text</p>
+
+				<p>以文本形式储存配置数据。</p></li>
+				<li><p>Small， single-purpose program</p>
+
+				<p>程序尽量朝向小而单一的目标设计</p></li>
+				<li><p>Avoid captive user interfaces</p>
+
+				<p>尽量避免令人困惑的用户接口</p></li>
+				<li><p>Ability to chain program together to perform complex tasks</p>
+
+				<p>将几个程序连结起来，处理大而复杂的工作。</p></li>
+				</ol>
+
+				<h4>《The Unix-Haters Handbook》，中文译做《Unix痛恨者手册》</h4>
+
+				<p><a href="http://research.microsoft.com/~daniel/uhh-download.html">http://research.microsoft.com/~daniel/uhh-download.html</a></p>
+
+				<p>虽然这是十年前的一本书了，但还是值得一读。</p>
+
+				<p>这本书以调侃的语气声讨了Unix的种种不是，
+				指出了许多Unix的设计错误，指出了种种看起
+				来很合理的设计走向了荒谬，还这样调侃了C语
+				言——“如果说C语言给足了让你上吊的绳子，那
+				么，C++在给了你足够的绳子把你的邻居全部捆
+				起来之后，还给了你足够的绳子让你为一艘小
+				帆船装上帆，最后你还有足够的绳子把自己吊
+				死在帆船的桅杆上”。呵呵，相当的尖酸刻薄吧。
+				里面有一句对操作系统的评价是这样的：“The
+				fundamental difference between Unix and
+				the Macintosh operating system is that
+				Unix was designed to please programmers，
+				whereas the Mac was designed to please
+				users。 （Windows， on the other hand，
+				was designed to please
+				accountants。”（Windows设计给会计人员？！
+				连计算机用户都不是了，呵呵）</p>
+
+				<p>　　不过，可以感觉得到这本书的作者在书中
+				对Unix的感情是比较复杂的，爱恨交加，在书
+				的最后有这样一句话“would anyone have
+				spent this much time and effort writing
+				about how much they hated Unix if they
+				didn’t secretly love it？ I’ll leave
+				that to the readers to judge， but in
+				the end， it really doesn’t matter： If
+				this book doesn’t kill Unix， nothing
+				will”。是的，如果Unix能够存活这么长的时间，
+				那么，不会有什么东西可以把他消灭了。</p>
+			</article>
+
+		</section>
+	</body>
+</head>
