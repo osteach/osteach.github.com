@@ -20,7 +20,9 @@ var list = {
 			[ "软件分类", "class/freesoftware/Classification" ],
 			[ "开源软件许可证", "class/freesoftware/License" ],
 			[ "UNIX和黑客文化", "class/freesoftware/Unix" ],
-			[ "Linux与操作系统", "class/freesoftware/Linux" ]
+			[ "Linux与操作系统", "class/freesoftware/Linux" ],
+			[ "Linux的使用", "class/freesoftware/Learn-to-use-Linux" ],
+			[ "视频", "class/freesoftware/Video" ]
 
 		]
 	},
