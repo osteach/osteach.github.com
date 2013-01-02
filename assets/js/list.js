@@ -22,7 +22,10 @@ var list = {
 			[ "UNIX和黑客文化", "class/freesoftware/Unix" ],
 			[ "Linux与操作系统", "class/freesoftware/Linux" ],
 			[ "Linux的使用", "class/freesoftware/Learn-to-use-Linux" ],
-			[ "视频", "class/freesoftware/Video" ]
+			[ "视频", "class/freesoftware/Video" ],
+			[ "图形界面", "class/freesoftware/Graphic" ],
+			[ "控制台与终端", "class/freesoftware/Shell" ]
+
 
 		]
 	},
