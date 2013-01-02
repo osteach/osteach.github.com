@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+	<title>版本控制</title>
+	<link rel="stylesheet" href="../../assets/css/page.css">
+</head>
+	<body>
+		<header>
+			<h1>版本控制</h1>
+		</header>
+		<section>
+			<article>
+				
+
+				<p>“即使你的团队只有你一个人，你的项目只需一周的时间；即使那是‘用过就扔’的原型；即使你的工作并非源码；确保每样东西都处在源码控制之下——文档、电话号码表、给供应商的备忘录、makefile、构建与发布流程、烧制CD的shell脚本——每样东西。”
+				    ——（《程序员修练之道》）。</p>
+
+				<h3>你是否如此</h3>
+
+				<h4>刚开始</h4>
+
+				<p>在一台机器上写文档，时常保存一下，好开心</p>
+
+				<h4>然后</h4>
+
+				<p>某天发现刚删掉的前几天写的内容其实是有用的，可惜没了，只能重写，哭</p>
+
+				<h4>于是</h4>
+
+				<p>时常把文件另存一下，保存多个版本，以备不测，好聪明</p>
+
+				<h4>但是</h4>
+
+				<p>多久另存一个版本呢？太频繁，文件很多，占用空间；不太频繁，确定版本所做的修改不容易</p>
+
+				<p>最终导致另一个问题：需要的内容在哪个版本里呢？这个真心不好找，难</p>
+
+				<h4>后来</h4>
+
+				<p>电脑好多，有时候在这台机器上修改，有时候在那台机器上调整，产生了n多版本</p>
+
+				<p>最后都不知道哪个是最新版本，最新版本在哪里，晕</p>
+
+				<h4>再后来</h4>
+
+				<p>好多人要一起写一个文档，相互之间可能要修改一个文档的同一个部分，怎么办</p>
+
+				<h4>只能</h4>
+
+				<p>某人要修改某个部分的时候说一声，其他人就别修改那个部分，直到这个人修改完毕，并把修改的文档再次分发给大家，累</p>
+
+				<h4>可是</h4>
+
+				<p>这部分我之前写的很好的，不知道谁把它改的面目全非，没有人承认，怒</p>
+
+				<h4>。。。</h4>
+
+				<h3>问题</h3>
+
+				<ol>
+				<li>文档处于不断的修改和完善过程中</li>
+				<li>需要保留不同的历史版本</li>
+				<li>需要快速定位历史版本</li>
+				<li>可能有多人共同合作</li>
+				</ol>
+
+				<p>如何高效安全的存储、控制和管理？</p>
+
+				<h3>你们是如何解决的？</h3>
+
+				<h4>本地</h4>
+
+				<h4>分布式的多人合作</h4>
+
+				<h3>版本控制系统(vcs)</h3>
+
+				<p>版本控制是一种记录若干文件内容变化，以便将来查阅特定版本修订情况的系统。</p>
+
+				<h4>商业软件</h4>
+
+				<h4>ClearCase</h4>
+
+				<p>配置复杂，功能强大，价格也同样对得起它的功能</p>
+
+				<h4>Visual Studio自带的SourceSafe</h4>
+
+				<p>与它的开发工具完美整合，使用方便，但是对于其它语言和工具的支持就差一些了</p>
+
+				<h3>开源软件</h3>
+
+				<p><em><strong></em> cvs
+				*<em></strong> subversion
+				<strong></em>* git
+				*<em></strong> Monotone
+				<strong></em>* fossil
+				*<em></strong> darcs
+				<strong></em>* Mercurial/Hg
+				*<em></strong> Bazaar
+				*</em>** GNU Arch</p>
+
+				<h3>入门资料</h3>
+
+				<h4>与图书馆类比</h4>
+
+				<ul>
+				<li>Repository</li>
+				<li>checkout</li>
+				<li>checkin</li>
+				<li>merge
+				<h4>基本概念</h4></li>
+				</ul>
+
+				<p><a href="http://www.ruanyifeng.com/blog/2008/12/a_visual_guide_to_version_control.html">http://www.ruanyifeng.com/blog/2008/12/a_visual_guide_to_version_control.html</a></p>
+
+				<h4>十个历程</h4>
+
+				<p><a href="http://blog.jobbole.com/14489/">http://blog.jobbole.com/14489/</a></p>
+
+				<h4>发展简史</h4>
+
+				<p><a href="http://progit.org/book/zh/ch1-1.html">http://progit.org/book/zh/ch1-1.html</a></p>
+
+				<h4>系统发展史</h4>
+
+				<p><a href="http://coolshell.cn/articles/3288.html">http://coolshell.cn/articles/3288.html</a></p>
+
+				<h4>cvs</h4>
+
+				<p>CVS的全称为Concurrent Version System（并
+				行版本系统）。CVS是开源软件世界的一个伟大
+				杰作，由于其简单易用、功能强大、跨平台、
+				支持并发版本控制，而且免费，在全球中小型
+				软件企业中得到了广泛使用。</p>
+
+				<h4>诞生于1986年，当时作为一组Shell脚本出现；</h4>
+
+				<h4>1989年3月，Brian Berlinor用C语言重新设计并编写CVS代码；</h4>
+
+				<h4>1993年前后，Jim Kingdon最终将CVS设计成基于网络的平台，开发者们能从Internet任何地方获得程序源代码</h4>
+
+				<h4>基本工作思路</h4>
+
+				<p>在一台服务器上建立一个仓库，仓库里可以存
+				放许多不同项目的源程序。由仓库管理员统一
+				管理这些源程序。这样，就好象只有一个人在
+				修改文件一样。避免了冲突。每个用户在使用
+				仓库之前，首先要把仓库里的项目文件下载到
+				本地。用户做的任何修改首先都是在本地进行，
+				然后用 cvs 命令进行提交，由 cvs 仓库管理
+				员统一 修改。这样就可以做到跟踪文件变化，
+				冲突控制等等。</p>
+
+				<h4>弊端</h4>
+
+				<ol>
+				<li>不支持文件改名</li>
+				<li>只对文件控制版本，没有目录的管理</li>
+				<li>...</li>
+				</ol>
+
+				<h3>subversion</h3>
+
+				<p>CVS的主要作者（Fogel等）在他们现任公司的
+				资助下开发了SubVersion，用以替代CVS</p>
+
+				<h4>两种运行模式</h4>
+
+				<ol>
+				<li><p>作为独立的服务器</p>
+
+				<p>默认使用3690端口，像
+				CVS那样来运行，支持直接连接或者SSL连接</p>
+
+				<ul><li>反应速度和连接速度都要比Apache要快一
+				些</li>
+				<li>有自己的用户认证方式，（使用系统中现
+				有的帐号）</li>
+				<li>更容易配置和使用</li></ul></li>
+				<li>借助Apache2的Webdav功能，直接挂接在
+				Apache上，作为它的一个模块来运行
+				<ul><li>Apache有很多的认证方式，还有非常细致
+				的对目录的权限管理</li>
+				<li>可以使用浏览器提供最简单的查看最新版
+				本的功能</li></ul></li>
+				</ol>
+
+				<h4><a href="http://svnbook.red-bean.com/index.zh.html">http://svnbook.red-bean.com/index.zh.html</a></h4>
+
+				<h3>git</h3>
+
+				<p>cvs和subversion是集中式版本控制系统</p>
+
+				<p>我们禁止提交不能编译通过的代码，尽量
+				不提交不能测试通过的代码。结果，对于
+				很复杂的模块，有人几乎一个月都没提交
+				过一次。他总是觉得程序还不太成熟，但
+				几经修改的代码其实从来没有作版本控制。
+
+				有些模块由两个人合作编写，关系非常紧
+				凑。有时候需要在两人之间交换一些代码，
+				为了方便，大家通过代码仓库中转，结果
+				在仓库中留下许多未完成的版本。
+
+				代码被用笔记本带回家，结果在家完成的
+				部分无处可以提交。（为了安全，我们的
+				代码仓库不能从外网访问）
+
+				某人写了一个模块，总是有 bug 没有修改
+				完，而不敢提交。这个时候，另一个人希
+				望协助他找问题，却没有合适的途径
+				share 那段完成了一半的模块。跑过去
+				XP 一下么？天哪，为什么我们这里每个人
+				用的编辑器都不一样，还都爱用些特别个
+				性的配色方案呢？
+				</p>
+
+				<p>微软的开源项目托管平台CodePlex现在正式支持Git分布式版本控制系统。 git是
+				Linus Torvalds创造的版本控
+				制系统，过去几年势头已经压过了其它竞争对手如CVS和Subversion。CodePle此前
+				采用的是微软的集中式版本控
+				制系统TFS和开源分布式版本控制系统Mercurial。微软表示，Git是CodePlex社区最
+				迫切想要的功能之一；此外
+				，微软开发者也每天使用Git。*</p>
+
+				<h4><a href="http://www.nshen.net/sitelog/2011/08/03/git-note.html">http://www.nshen.net/sitelog/2011/08/03/git-note.html</a></h4>
+
+				<h4><a href="http://opensoul.org/blog/archives/2011/09/01/git-the-nosql-database/">http://opensoul.org/blog/archives/2011/09/01/git-the-nosql-database/</a></h4>
+
+				<p>mupdf ~/org/documents/Git_Cheat_Sheet_white.pdf</p>
+
+				<p>eio ~/org/documents/看日记学git.doc</p>
+
+				<h4>fossil</h4>
+
+				<h4><a href="http://www.openfoundry.org/tw/tech-column/8558-another-choice-for-distributed-version-control-system-fossil">http://www.openfoundry.org/tw/tech-column/8558-another-choice-for-distributed-version-control-system-fossil</a></h4>
+
+				<h4>操作簡單</h4>
+
+				<p>一般人即使沒有使用版本控制軟體的經驗，也
+				能在閱讀 Fossil 提供的簡單文件之後立即上
+				手</p>
+
+				<p>整合了一套以網頁型式作為操作介面的圖形化
+				管理介面</p>
+
+				<h4>系統本身穩定性高</h4>
+
+				<p>Fossil 採用 SQLite 資料庫作為資料儲存的平
+				台</p>
+
+				<p>mupdf ~/org/documents/fossil-quickref.pdf</p>
+
+				<h4>用途：旅行必備、居家良伴、送禮自用兩相宜的“版本控制系統”</h4>
+
+				<p><em>*</em> 做專題、報告、寫論文乃至於翻等譯
+				就算是自己一個人的工作，也鮮少有一口氣完
+				成的，多半都得耗上許多日子，逐步增添、編
+				修、刪減手上的文件內容，纔會得到最終的結
+				果。然而在這個過程中，卻有可能發生許許多
+				多的意外：像是不慎刪除了重要的資訊（而沒
+				有備份）、不小心拿舊版本蓋掉新版本、檔案
+				毀損而再也無法復原</p>
+
+				<h4>抓住事情的演变过程，从中学习</h4>
+
+				<p>曾經有一個朋友，習慣性地把公司的行政規章
+				細則放進版本管理系統裏，並且每個月更新一
+				次；結果她發現了公司會偷偷地修改某些細則，
+				像是員工福利、請假規定等，一點一滴地蠶食
+				鯨吞屬於員工的權益。如果沒有版本管理系統，
+				她就沒辦法輕易比對出公司行政規章的歷代演
+				變了</p>
+
+				<p>IBM 公司有一個計畫叫 Collaborative User
+				Experience Projects ，就利用版本管理系統
+				這方面的優勢，製作了文件的沿革 (history
+				flow) ，分析同一份文件在不同時間點時各元
+				素所佔的比重，以及不同貢獻者對文件所造成
+				的影響</p>
+				
+			</article>
+
+		</section>
+	</body>
+</head>

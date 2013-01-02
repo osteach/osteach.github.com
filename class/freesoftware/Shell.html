@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+	<title>命令行</title>
+	<link rel="stylesheet" href="../../assets/css/page.css">
+</head>
+	<body>
+		<header>
+			<h1>命令行</h1>
+		</header>
+		<section>
+			<article>
+				
+
+				<p>Neal Stephenson
+
+				In the Beginning … Was the Command Line
+				</p>
+
+				<h3>控制台和终端</h3>
+
+				<p><a href="http://blog.csdn.net/liaoxinmeng/article/details/5004743">http://blog.csdn.net/liaoxinmeng/article/details/5004743</a></p>
+
+				<ol>
+				<li>终端和控制台都不是个人电脑的概念,而是
+				多人共用的小型中型大型计算机上的概念一
+				台主机,连很多终端,终端为主机提供了人机
+				接口,每个人都通过终端使用主机的资源.
+				终端有字符哑终端和图形终端两种</li>
+				<li>控制台是另一种人机接口, 不通过终端与主
+				机相连, 而是通过显示卡-显示器和键盘接
+				口分别与主机相连, 这是人控制主机的第一
+				人机接口</li>
+				<li>个人计算机只有控制台,没有终端.</li>
+				<li>在控制台上通过getty软件虚拟了六个字符
+				哑终端（或者叫控制台终端tty1-tty6)(数
+				量可以在/etc/inittab里自己调)和一个图
+				型终端, 在虚拟图形终端中又可以通过软件
+				(如rxvt)再虚拟无限多个虚拟字符哑终端
+				（pts/0....）.</li>
+				</ol>
+
+				<h3>shell</h3>
+
+				<p>文字操作系统与外部最主要的接口就叫做
+				shell。shell是操作系统最外面的一层。
+				shell管理你与操作系统之间的交互:等待你输
+				入，向操作系统解释你的输入，并且处理各种
+				各样的操作系统的输出结果。</p>
+
+				<p>shell是一个命令处理器（command
+				processor）——是一个读入并解释你输入的命令
+				的程序。shell独立于操作系统，这种设计让用
+				户可以灵活选择适合自己的shell。shell让你
+				在命令行键入命令，经过shell解释后传送给操
+				作系统（内核）执行。</p>
+
+				<p>shell提供了你与操作系统之间通讯的方式。这
+				种通讯可以以交互方式（从键盘输入，并且可
+				以立即得到响应），或者以shell script(非交
+				互)方式执行。shell script是放在文件中的一
+				串shell和操作系统命令，它们可以被重复使用。
+				本质上，shell script是命令行命令简单的组
+				合到一个文件里面。</p>
+
+				<h4>Bourne Shell</h4>
+
+				<p>最初的UNIX shell是由Stephen R. Bourne于
+				20世纪70年代中期在新泽西的AT&amp;T贝尔实验室
+				编写的，这就是Bourne shell。Bourne shell
+				是一个交换式的命令解释器和命令编程语言。
+				Bourne shell 可以运行为login shell或者
+				login shell的子shell(subshell)。只有
+				login命令可以调用Bourne shell作为一个
+				login shell。此时，shell先读取
+				/etc/profile文件和$HOME/.profile文件。
+				/etc/profile文件为所有的用户定制环
+				境,$HOME/.profile文件为本用户定制环境。最
+				后，shell会等待读取你的输入。</p>
+
+				<h4>bash</h4>
+
+				<p>Bourne-Again SHell</p>
+
+				<p>bash是GNU计划的一部分，用来替代Bourne
+				shell。它用于基于GNU的系统如Linux.大多数
+				的Linux(Red Hat, Slackware, Caldera)都以
+				bash作为缺省的shell，并且运行sh时，其实调
+				用的是bash。</p>
+
+				<h4>C Shell</h4>
+
+				<p>Bill Joy于20世纪80年代早期，在Berkeley的
+				加利福尼亚大学开发了C shell。它主要是为了
+				让用户更容易的使用交互式功能，并把ALGOL风
+				格的语法结构变成了C语言风格。它新增了命令
+				历史、别名、文件名替换、作业控制等功能。</p>
+
+				<h4>zsh</h4>
+
+				<p>zsh: The last shell you’ll ever need!</p>
+
+				<p>Z 是最后一个字母，所以它是终极 Shell。</p>
+
+				<p>zsh有强大的自动补全功能，能自动补全命令、
+				参数、文件名、进程、用户名、变量、权限符
+				等</p>
+
+				<p><a href="http://i.linuxtoy.org/docs/guide/ch30s02.html">http://i.linuxtoy.org/docs/guide/ch30s02.html</a>
+				http://thewebdev.de/zsh-a-bash-alternative-thats-easily-customizable-with-oh-my-zsh/</p>
+
+				<h4>提示</h4>
+
+				<p>Bash使用PS1~PS4来显示提示符号，其格式如下:</p>
+
+				<p>\t : 现在时间。
+				\d : 现在日期。
+				\n : 新行。
+				\s : shell的名称。
+				\w : 目前工作目录。
+				\W : 目前工作目录完整路径。
+				\u : 使用者名称。
+				\h : Hostname。
+				# : 这个命令的号码。
+				! : 历史号码。
+				\$ : 如果EUID是0，则#，否则为$。
+				\nnn : 八进位的字元。
+				\ : "\"符号。
+				[ : 开始一序列不可列印的字元。
+				] : 结束一序列不可列印的字元。</p>
+
+				<h4>tmux</h4>
+
+				<p>tmux是一个优秀的终端复用软件（在终端里开
+				启多窗口），类似GNU Screen，但来自于
+				OpenBSD，采用BSD授权。使用它最直观的好处
+				就是，通过一个终端登录远程主机并运行tmux
+				后，在其中可以开启多个控制台而无需再“浪
+				费”多余的终端来连接这台远程主机；当然其功
+				能远不止于此。</p>
+
+				<p>与 GNU screen 相似，tmux 也使用快捷键来执行相关操作。要创建一个新的窗口，可以按 C-b c，即先按 Ctrl-b，再按 c。在各个窗口间切换可使用下列快捷键：</p>
+
+				<pre><code>C-b ?  // 显示快捷键帮助
+				C-b C-o  //调换窗口位置
+				C-b 空格键  //采用下一个内置布局
+				C-b ! // 把当前窗口变为新窗口
+				C-b  "  // 模向分隔窗口
+				C-b % // 纵向分隔窗口
+				C-b q // 显示分隔窗口的编号
+				C-b o // 跳到下一个分隔窗口
+				C-b 上下键 // 上一个及下一个分隔窗口
+				C-b C-方向键 //调整分隔窗口大小
+				C-b &amp; // 确认后退出 tmux
+				C-b c // 创建新窗口
+				C-b 0~9 //选择几号窗口
+				C-b c // 创建新窗口
+				C-b n // 选择下一个窗口
+				C-b l // 最后使用的窗口
+				C-b p // 选择前一个窗口
+				C-b w // 以菜单方式显示及选择窗口
+				C-b s // 以菜单方式显示和选择会话
+				C-b t //显示时钟
+				</code></pre>
+
+				<p>分离会话可执行 C-b d 。</p>
+
+				<p>通过 man tmux 可以获得更详尽的 tmux 使用指南。
+				- <a href="http://robots.thoughtbot.com/post/2641409235/a-tmux-crash-course">http://robots.thoughtbot.com/post/2641409235/a-tmux-crash-course</a>
+				- <a href="http://pragprog.com/book/bhtmux/tmux">http://pragprog.com/book/bhtmux/tmux</a></p>
+
+				<h3>Windows</h3>
+
+				<ul>
+				<li>cygwin</li>
+				<li>msys+mingw
+				<h4>常用按键</h4></li>
+				</ul>
+
+				<h4>TAB</h4>
+
+				<p>自动补全（文件名）</p>
+
+				<h4>Ctrl-C</h4>
+
+				<p>中断程序</p>
+
+				<p>ping localhost</p>
+
+				<h5><up>/<down></h5>
+
+				<p>已经执行的命令</p>
+
+				<h4>常用命令</h4>
+
+				<ul>
+				<li>总是可以通过-h或man来查看使用方法的！</li>
+				</ul>
+
+				<p><strong>* 文件和目录管理
+				*<em></strong> pwd
+				<strong></em>* cd
+				*<em></strong> ls
+				<strong></em>* mkdir
+				*<em></strong> cp
+				<strong></em>* mv
+				*<em></strong> rm
+				<strong></em> 用户和组管理
+				**</strong> 超级用户 root （也有可能是admin或toor）
+				最高权限</p>
+
+				<p>the principle of least privilege</p>
+
+				<h4>一般用户</h4>
+
+				<ol>
+				<li><p>/etc/passwd</p>
+
+				<p>name:password:ID:group_ID:comment:home_directory:login_shell</p></li>
+				<li><p>useradd</p>
+
+				<p>useradd --shell /sbin/nologin --home-dir /home/zwz/test just_for_test_user</p></li>
+				<li><p>usermod</p></li>
+				<li><p>userdel</p>
+
+				<p>userdel just_for_test_user</p></li>
+				</ol>
+
+				<h4>组管理</h4>
+
+				<ol>
+				<li><p>[@0] groups</p></li>
+				<li><p>/etc/group</p>
+
+				<p>group_name:password:group_ID:user_list</p></li>
+				<li><p>groupadd</p></li>
+				<li><p>groupmod</p></li>
+				<li><p>groupdel</p></li>
+				</ol>
+
+				<p>佛罗里达大学宣布取消计算机科学系，以节省170万美元。该校取消了计算机科学系
+				教师助理的所有资助，完全
+				关闭了研究生和研究项目，将剩余人等分配到其它系。与此同时，该校今年的体育
+				预算为9900万美元，比上一年
+				增加了200万美元。佛罗里达大学生建立了一个“拯救计算机科学系”的网站，乔治亚
+				理工学院计算机科学系主任
+				Zvi Galil教授致函校长Bernard Machen，称感到“惊讶，震惊和愤怒”。许多知名的
+				计算机科学家对此都表达了
+				担忧。*</p>
+
+				<p>MIT黑客将麻省剑桥最高的建筑物Green Building变成了一个巨大的可玩的彩色俄罗
+				斯方块游戏。游戏一开始是
+				滚动展示俄罗斯方块的英文单词TETRIS，然后开始第一关（视频），据称MTI黑客长
+				期以来将在Green Building
+				上玩俄罗斯方块视为hack的“圣杯”，因为建筑物的外形是与游戏相同的网格状。类
+				似的建筑物变俄罗斯方块以前
+				发生过多次，最早可能是在1995年。*</p>
+
+				<p>"多家明胶厂将铬含量严重超标的工业明胶卖给胶囊生产企业，然后加工
+				生产药用胶囊。中国央视主持
+				人在微博中建议大众为食品安全少吃果冻和酸奶。云南省镇雄县一小学337名小学生
+				吃了营养餐后出现腹泻、腹
+				痛、发高烧等症状。云南泸西126名小学生疑似食物。云南芒部镇、坡头镇、木卓乡
+				三地发生过疑似食物中毒事
+				件。贵阳一小学也发生了营养餐疑似中毒。事件体育总局下达非正式“禁肉令”。不
+				少中央和地方的政府部门都在
+				享受特供食品。中国羽毛球队食用特供肉。有人评论说，这是中国社会人人害我，
+				我害人人现象。"*</p>
+
+				<p>《经济学人》认为，人类现在已经进入第三次工业革命时代，十八世纪末的第一次
+				工业革命以机器取代手工，二
+				十世纪初的第二次工业革命强调大量生产，而近年来兴起的第三次工业革命则是制
+				造数字化，为传统制造业的面
+				貌和生产方式带来巨大改变。智能软件、新材料、更灵活的机器、新制造工艺（特
+				别是3D打印）、以及网络提供
+				的各种软件服务，这些新科技使工厂得以逐渐挥别批量生产，进入定制化，以更低
+				的成本，生产少量但多样化的
+				产品，满足不同顾客的不同需求。所有革命都要付出代价，第三波工业革命也不例
+				外，就像之前两波工业革命都
+				曾淘汰若干行业和劳工，未来制造业势必再出现一场优胜劣败的大洗牌，工厂需要
+				的劳工将越来越少，但需要更
+				高的技能。*</p>
+
+				<p>《大象之梦》导演Bassam Kurdali正在制作一部新3D动画 Tube，故事受到了古代美
+				索不达米亚《吉尔伽美什史
+				诗》的启发。史诗所述的时间距今有五千年之久，围绕Uruk国王吉尔伽美什
+				（Gilgamesh）展开，他暴虐无度导
+				致神派遣半人半兽的恩奇都（Enkidu）来惩罚他，但两人却英雄相惜，结成好友。
+				恩奇都病逝后吉尔伽美什开始
+				害怕自己死亡。他试图寻求永生，但最后发现他实现的不同于他最初寻找到。大约
+				五千年后，女兵吉尔伽美什因
+				为追逐被路过火车刮走的纸片而跑进一个车站。Bassam试图以新作品向独立电影制
+				作人证明自由文化作品的可行
+				性，以及自由软件Blender和PiTiVi的可用性。Tube将采用CC BY-SA 3.0授权，预计
+				将在7个月内完成，
+				Kickstarter筹款活动在发布数天内就达到了集资目标。《大象之梦》的制作费用为
+				10万英镑，《Sintel》约40
+				万到50万英镑。*</p>
+
+				<p>Linux作者李纳斯·托沃兹（Linus Torvalds）和京都大学教授山中伸弥获得了2012
+				年度千禧年科技奖。千禧年科
+				技奖由芬兰于2004年设立，是世界最大的科技奖，每两年颁发一次，首届获奖者是
+				WWW发明人蒂姆·伯纳斯·李爵
+				士。托沃兹的获奖理由是他创造了被广泛使用的Linux kernel，对共享软件开发、
+				开源和开放Web具有深远影响
+				，无数人的电脑、智能手机和摄像机都运行在他创造的内核上。山中伸弥的获奖原
+				因是他发展出新技术产生诱导
+				多能干细胞，不需要依赖胚胎干细胞。他的研究推动了干细胞研究，有助于战胜癌
+				症、糖尿病和阿尔茨海默氏症
+				。*</p>
+
+				<h4>程序和进程</h4>
+
+				<h4>运行程序</h4>
+
+				<ul>
+				<li><p>程序在哪？</p>
+
+				<ol><li><p>要执行的程序位于环境变量PATH指定的路径内</p></li>
+				<li><p>要执行的程序就在当前目录下</p></li>
+				<li><p>要执行的程序完整路径可知</p></li></ol></li>
+				<li><p>是否可以执行？</p>
+
+				<ul><li>二进制</li>
+				<li>脚本</li></ul></li>
+				<li><p>当前用户是否有执行权限？</p>
+
+				<ul><li>ls -l</li></ul>
+
+				<p>见[[*权限管理][权限管理]]</p>
+
+				<h4>系统服务</h4></li>
+				<li><p>/etc/rc.d/xxx command</p></li>
+				<li>/etc/init.d/xxx command</li>
+				</ul>
+
+				<p>command:
+				1. start
+				2. stop
+				3. restart
+				4. reload
+				5. status</p>
+
+				<h4>进程管理</h4>
+
+				<ol>
+				<li>top</li>
+				<li>ps</li>
+				<li>kill</li>
+				<li>killall</li>
+				</ol>
+
+				<h3>文件系统</h3>
+
+				<h4>Ext3</h4>
+
+				<ol>
+				<li>单个文件最大可以是16T</li>
+				<li>不许要碎片整理</li>
+				<li>文件名区分大小写</li>
+				<li>文件名长度可以达到256个字符</li>
+				</ol>
+
+				<h4>inode</h4>
+
+				<ol>
+				<li>文件权限</li>
+				<li>用户和组的所有权</li>
+				<li>文件大小</li>
+				<li>访问和修改时间</li>
+				</ol>
+
+				<p><em>不包括实际的文件名</em></p>
+
+				<p>每个节点都有唯一标识符</p>
+
+				<p>ls -i</p>
+
+				<h4>链接</h4>
+
+				<ol>
+				<li><p>硬链接</p>
+
+				<p>ln ./auto/beamer-animation.el just_for_test_ln</p></li>
+				<li><p>软链接</p>
+
+				<p>ln -s ./auto/beamer-animation.el ./auto/just_for_test_ln_soft</p></li>
+				</ol>
+
+				<h4>读取文件</h4>
+
+				<ol>
+				<li>cat</li>
+				<li>less</li>
+				<li>head</li>
+				<li>tail</li>
+				</ol>
+
+				<h4>文件编辑</h4>
+
+				<h4>文件打包</h4>
+
+				<ul>
+				<li>zip</li>
+				<li>7z</li>
+				<li>tar</li>
+				</ul>
+
+				<h3>系统管理</h3>
+
+				<h4>获得超级用户权限</h4>
+
+				<ul>
+				<li><p>su</p>
+
+				<p>substitute user</p></li>
+				<li>sudo</li>
+				</ul>
+
+				<h4>查看硬件使用情况</h4>
+
+				<ul>
+				<li>lspci</li>
+				<li>df</li>
+				<li><p>du</p>
+
+				<p>sudo du -h --max-depth=1</p></li>
+				<li><p>free
+				查看空闲内存</p></li>
+				</ul>
+
+				<h4>安装软件</h4>
+
+				<ol>
+				<li><p>软件包自动管理</p>
+
+				<ul><li>RPM :: redhat
+				<ul><li>yum</li></ul></li>
+				<li>APT :: Debian
+				<ul><li>apt-get</li></ul></li>
+				<li>TGZ :: Slackware</li></ul></li>
+				<li><p>软件包下载手动安装</p></li>
+				<li><p>从源代码编译安装</p>
+
+				<p>tar zxvf xxx-version.tar.gz
+				cd xxx-version
+				./configure
+				make
+				sudo make install</p>
+
+				<p><em>注意阅读其中的 README 或 INSTALL</em></p></li>
+				</ol>
+
+				<h4>权限管理</h4>
+
+				<ol>
+				<li><p>文件权限</p>
+
+				<ul><li>读 r</li>
+				<li>写 w</li>
+				<li>执行 x</li></ul></li>
+				<li><p>目录权限</p>
+
+				<ul><li><p>r :: 指定是否允许目录中的内容被列出（如使用ls）</p></li>
+				<li><p>w :: 指定是否允许在该目录中新建或删除文件</p></li>
+				<li><p>x :: 指定是否可以进入该目录（如使用cd）</p></li>
+				<li><p>chmod</p></li>
+				<li>chown</li>
+				<li>chgrp</li></ul></li>
+				</ol>
+
+				<h4>高效的命令行</h4>
+
+				<p><a href="http://coolshell.cn/articles/1044.html">http://coolshell.cn/articles/1044.html</a></p>
+
+				<h4>高级命令</h4>
+
+				<p><a href="http://pascal.iiit.ac.in/~itws2/index.html#sec-7">http://pascal.iiit.ac.in/~itws2/index.html#sec-7</a></p>
+
+				<h4>其他用途</h4>
+
+				<p><a href="http://coolshell.cn/articles/1256.html">http://coolshell.cn/articles/1256.html</a></p>
+
+				<h4>web tty</h4>
+
+				<p><a href="http://19.testape.com/webtty_page.php">http://19.testape.com/webtty_page.php</a></p>
+
+				<h4>weevely</h4>
+
+				<p>Shawn the R0ck 写道 "weevely是一款针对PHP的
+				webshell的自由软件，严格遵循GPL自由软件许可证，
+				weevely可用于模拟一个类似于telnet的连接shell，
+				weevely通常用于web程序的漏洞利用，隐藏后门或者
+				使用类似telnet的方式来代替web页面式的管理，
+				weevely生成的服务器端php代码是经过了base64编码
+				的，所以可以骗过主流的杀毒软件和IDS，上传服务
+				器端代码后通常可以通过weevely直接运行。
+				weevely 0.6的发布让weevely更稳定，也在多态编码
+				上有所加强。"*</p>
+
+
+				<h3>你所不知道的</h3>
+				<h4>\n 和 \r<h4>
+				
+				<h4>Linux cal命令了解人类时间改革<h4>
+				<p>cal 9 1752</p>
+				<p>1582年，罗马教廷要求从1582年10月中减去10天，因此1852年10月4日后面紧跟着就是15日。意大利、西班牙等国家都这样处理
+了，其他天主教国家也很快跟着这么做了。但新教国家不愿意修改。这个改革在英国及其殖民地在1752年9月才被执行，所以
+1752年9月2日后面就是14日。而在希腊等东正教国家，直到20世纪初才修改。</p>
+			</article>
+
+		</section>
+	</body>
+</head>
