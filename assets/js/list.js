@@ -24,7 +24,8 @@ var list = {
 			[ "Linux的使用", "class/freesoftware/Learn-to-use-Linux" ],
 			[ "视频", "class/freesoftware/Video" ],
 			[ "图形界面", "class/freesoftware/Graphic" ],
-			[ "控制台与终端", "class/freesoftware/Shell" ]
+			[ "控制台与终端", "class/freesoftware/Shell" ],
+			[ "版本控制", "class/freesoftware/Revisioncontrol" ]
 
 
 		]
