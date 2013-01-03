@@ -25,9 +25,12 @@ var list = {
 			[ "视频", "class/freesoftware/Video" ],
 			[ "图形界面", "class/freesoftware/Graphic" ],
 			[ "控制台与终端", "class/freesoftware/Shell" ],
-			[ "版本控制", "class/freesoftware/Revisioncontrol" ]
-
-
+			[ "版本控制", "class/freesoftware/Revisioncontrol" ],
+			[ "加密", "class/freesoftware/Encryption" ],
+			[ "文本编辑器", "class/freesoftware/Editor" ],
+			[ "其他", "class/freesoftware/Others" ],
+			[ "如何为开源做贡献", "class/freesoftware/Howto" ],
+			[ "杂", "class/freesoftware/Hooo" ]
 		]
 	},
 	"开源运动": {
