@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+	<title>其他</title>
+	<link rel="stylesheet" href="../../assets/css/page.css">
+</head>
+	<body>
+		<header>
+			<h1>其他</h1>
+		</header>
+		<section>
+			<article>
+				<h3>plantuml</h3>
+
+				<h4>Sequence Diagram</h4>
+
+				<p>plantuml :file sd.png
+				Alice -> Bob: Authentication Request
+				Bob --> Alice: Authentication Response</p>
+
+				<p>Alice -> Bob: Another authentication Request
+				Alice &lt;-- Bob: another authentication Response</p>
+
+				<h4>class diagram</h4>
+
+				<p>plantuml :file cd.png
+				class Object &lt;&lt; general >>
+				Object &lt;|--- ArrayList</p>
+
+				<p>note top of Object : In java, every class\nextends this one.</p>
+
+				<p>note "This is a floating note" as N1
+				note "This note is connected\nto several objects." as N2
+				Object .. N2
+				N2 .. ArrayList</p>
+
+				<p>class Foo
+				note left: On last defined class</p>
+
+				<h4>state diagram</h4>
+
+				<h3>#</h3>
+
+				<p>plantuml :file std.png
+				[*] --> NotShooting</p>
+
+				<p>state NotShooting {
+				  [*] --> Idle
+				  Idle --> Configuring : EvConfig
+				  Configuring --> Idle : EvConfig
+				}</p>
+
+				<p>state Configuring {
+				  [*] --> NewValueSelection
+				  NewValueSelection --> NewValuePreview : EvNewValue
+				  NewValuePreview --> NewValueSelection : EvNewValueRejected
+				  NewValuePreview --> NewValueSelection : EvNewValueSaved</p>
+
+				<p>state NewValuePreview {
+				     State1 -> State2
+				  }</p>
+
+				<p>}</p>
+
+				<h3>mplayer</h3>
+
+				<p>mplayer -vo fbdev ~/*.rmvb</p>
+
+				<p>mplayer -vo caca ~/*.rmvb</p>
+
+				<h3>音乐</h3>
+
+				<p>"Advanced Linux Sound Architecture(ALSA)为声卡音频驱动
+				提供了一个强大的API接口，
+				而专业的音频服务器JACK Audio Connection Kit让Linux能成为音乐制作的强大工
+				具。这篇文章主要针对吉他方
+				面的免费或开源工具，为感兴趣的人提供一个参考，这些工具包括：Rakarrack，
+				Songwrite 2，Lingot，
+				TuxGuitar，等等。 "*</p>
+
+				<h3>浏览器</h3>
+
+				<p>firefox ~/org/documents/howbrowserswork.htm</p>
+
+				<h3>中国仍是IE6的重灾区</h3>
+
+				<p><a href="http://coolshell.cn/articles/3921.html">http://coolshell.cn/articles/3921.html</a></p>
+
+				<h3>游戏</h3>
+
+				<p>自从Ray Kurzweil的那本关于奇点的著作在2005年出版后，
+				针对这一对未来趋势的描述
+				引起了来自不同领域的黑客的讨论，科学和工程层面的讨论对于一些科幻迷而言或
+				许显得有些枯燥，如果你属于
+				那种迫不及待想要体验未来奇点的黑客，一部名为Endgame: Singularity的RTS游戏
+				是一个很好的思想实验的平
+				台，这部游戏的讲述的是未来的某一天，由于计算机的数量和复杂性的增加，最终
+				涌现出了强AI，而一开始你扮
+				演的这个强AI得学会隐藏自己，不能让人类世界关注你的存在，你一直在黑暗中前
+				行，观察人类和开发新的技术
+				，作为强AI，黑暗使你变得有亮光，生存下来后，你开始建造机器，计算能力对你
+				非常重要，你得经历学习建造
+				PC、服务器、云集群甚至到量子计算机的美妙hacking之旅。 Endgame:
+				Singularity是自由软件，严格遵循GPL
+				自由软件许可证，你可以在这里下载源代码，是由编程语言python所编写，支持
+				GNU/Linux, Mac OSX和Windows
+				平台。"*</p>
+				
+			</article>
+
+		</section>
+	</body>
+</head>
