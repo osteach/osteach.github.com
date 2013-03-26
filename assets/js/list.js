@@ -30,7 +30,10 @@ var list = {
 			[ "文本编辑器", "class/freesoftware/Editor" ],
 			[ "其他", "class/freesoftware/Others" ],
 			[ "如何为开源做贡献", "class/freesoftware/Howto" ],
-			[ "杂", "class/freesoftware/Hooo" ]
+			[ "杂", "class/freesoftware/Hooo" ],
+			[ "怀疑", "class/freesoftware/Doubt" ],
+			[ "总结", "class/freesoftware/Summary" ]
+			
 		]
 	},
 	"开源运动": {
