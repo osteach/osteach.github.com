@@ -13,7 +13,7 @@ var list = {
 	},
 	"开源文化": {
 		"课程": [
-			[ "软件天生就是自由的", "class/freesofsdafasdfasdftware/Freesoftware" ],
+			[ "软件天生就是自由的", "class/freesoftware/Freesoftware" ],
 			[ "RMS 与 GNU", "class/freesoftware/RMS&GNU" ],
 			[ "软件天生就是自由的", "class/freesoftware/Freesoftware" ],
 			[ "软件天生就是自由的", "class/freesoftware/Freesoftware" ],
